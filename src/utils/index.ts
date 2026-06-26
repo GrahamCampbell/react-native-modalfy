@@ -1,4 +1,5 @@
 import { Dimensions, Easing } from 'react-native'
+import type { ViewStyle } from 'react-native'
 
 import type { ModalOptions, ModalStackItemOptions, ModalStackOptions } from '../types'
 
@@ -7,6 +8,14 @@ export const vw = (percentage: number) => (Dimensions.get('window').width * perc
 export const vh = (percentage: number) => (Dimensions.get('window').height * percentage) / 100
 
 export const sh = (percentage: number) => (Dimensions.get('screen').height * percentage) / 100
+
+export const absoluteFillStyle: ViewStyle = {
+  position: 'absolute',
+  top: 0,
+  right: 0,
+  bottom: 0,
+  left: 0,
+}
 
 export const defaultOptions: ModalOptions = {
   animateInConfig: {
